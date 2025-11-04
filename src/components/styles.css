@@ -1,0 +1,96 @@
+/* ============================
+ ⚡ ENERGYVERSE GREEN NEON UI
+============================= */
+
+:root {
+  --bg: #010a04;
+  --bg-card: rgba(8,20,8,0.45);
+  --border: rgba(150,255,80,0.18);
+  --accent: #caff3a;
+  --accent-soft: #baff5a;
+  --text: #e4ffd2;
+  --text-dim: #8aff65;
+}
+
+/* Body */
+body {
+  background: radial-gradient(circle at 30% 20%, #00320a, #000a05);
+  font-family: "Inter", sans-serif;
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+}
+
+/* Page wrapper */
+.app-wrap {
+  max-width: 1300px;
+  margin: auto;
+  padding: 24px;
+}
+
+/* Universal Card */
+.ev-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 18px;
+  border-radius: 14px;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 0 12px rgba(150,255,80,.2);
+  animation: fadeUp .6s ease;
+  transition: .25s;
+}
+.ev-card:hover {
+  box-shadow: 0 0 18px rgba(150,255,80,.35);
+}
+
+/* Inputs */
+label { color: var(--text-dim); font-size: 13px; }
+input, select {
+  background: rgba(10,30,10,.6);
+  border: 1px solid rgba(150,255,80,.25);
+  border-radius: 8px;
+  padding: 8px 10px;
+  color: var(--text);
+  font-size: 14px;
+}
+input:focus, select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 10px rgba(180,255,80,.4);
+  outline: none;
+}
+
+/* Buttons */
+button {
+  background: var(--accent);
+  border: none;
+  color: #000;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: .22s;
+}
+button:hover {
+  background: var(--accent-soft);
+  box-shadow: 0 0 12px rgba(180,255,80,.4);
+  transform: translateY(-2px);
+}
+
+/* Grid Layout */
+.ev-grid {
+  display: grid;
+  gap: 18px;
+}
+.ev-2col { grid-template-columns: 1fr 1fr; }
+
+/* Mobile Fix */
+@media(max-width:900px){
+  .ev-2col { grid-template-columns: 1fr; }
+  button { width: 100%; }
+}
+
+/* Animation */
+@keyframes fadeUp {
+  from { opacity:0; transform:translateY(12px); }
+  to { opacity:1; transform:translateY(0); }
+}
