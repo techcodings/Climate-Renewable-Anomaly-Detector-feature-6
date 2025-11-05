@@ -5,7 +5,7 @@ import SeverityTable from "../components/SeverityTable";
 import MapImpact from "../components/MapImpact";
 import Alerts from "../components/Alerts";
 
-const API = "VITE_API_URL=https://mellow-sundae-ab0bf2.netlify.app/.netlify/functions";
+const API = "https://mellow-sundae-ab0bf2.netlify.app/.netlify/functions";
 
 export default function App() {
   const [data, setData] = useState(null);
