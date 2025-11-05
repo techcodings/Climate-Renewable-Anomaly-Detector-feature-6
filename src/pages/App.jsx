@@ -7,7 +7,7 @@ import Alerts from "../components/Alerts";
 import "../components/styles.css";
 
 // ✅ Use Netlify Functions endpoint
-const API = "https://mellow-sundae-ab0bf2.netlify.app/.netlify/functions";
+const API = "https://lambent-blini-607b09.netlify.app/.netlify/functions/api";
 
 export default function App() {
   const [data, setData] = useState(null);
