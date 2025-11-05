@@ -12,9 +12,12 @@ export default function Controls({sigma, onSigma, onDetect, onMap, onRegion, reg
     <button onClick={onMap}>Heatmap</button>
 
     <label>Region
-      <select value={selected} onChange={e=>onRegion(e.target.value)}>
-        {regions.map(r=> <option key={r}>{r}</option>)}
-      </select>
+      <select value={selected} onChange={(e) => onRegion(e.target.value)}>
+  {(regions || []).map((r) => (
+    <option key={r} value={r}>{r}</option>
+  ))}
+</select>
+
     </label>
   </div>
 </div>
